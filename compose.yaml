@@ -9,6 +9,5 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - DEPLOYMENT=deployment.json
       - EMAIL=test@inf.uc3m.es
       - PASSW=changeme

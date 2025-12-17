@@ -15,7 +15,7 @@ The configuration of the target boards must be placed in
 
 ## Executing
 
-### Using the Docker image
+### Building the Docker image
 ```
 docker compose up --build
 ```
