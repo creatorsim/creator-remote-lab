@@ -12,6 +12,8 @@ The configuration of the target boards must be placed in
 `config/deployment.json`.
 <!-- TODO: Explain config -->
 
+More information in the [CREATOR documentation](https://creatorsim.github.io/creator-wiki/teaching-resources/remote-lab.html).
+
 
 ## Executing
 
