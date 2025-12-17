@@ -17,7 +17,7 @@ More information in the [CREATOR documentation](https://creatorsim.github.io/cre
 
 ## Executing
 
-### Building the Docker image
+### With Docker Compose
 ```
 docker compose up --build
 ```

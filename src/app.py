@@ -220,11 +220,9 @@ else:
             sys.exit(f"Error reading file '{DEPLOYMENT_FILE}': {e}")
 
 
-# create result directory
-try:
-    os.mkdir("results")
-except Exception as _e:
-    pass
+# check for result directory
+if not os.path.isdir("results"):
+    sys.exit("Unable to find results/ folder. Make sure it exists.")
 
 
 # Queue management
