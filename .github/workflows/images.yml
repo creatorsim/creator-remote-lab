@@ -1,10 +1,11 @@
 name: Publish Docker image
 
 on:
-  release:
-    types: [published]
   push:
-    branches: [ "main" ]
+    branches:
+      - "main"
+    tags:
+      - "v*"
 
 jobs:
   push_to_registries:
@@ -43,6 +44,12 @@ jobs:
           images: |
             rajayonin/creator-remote-lab
             ghcr.io/${{ github.repository }}
+          tags: |
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+            # v0.1, etc. (for tags)
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
 
       - name: Build and push Docker images
         id: push
